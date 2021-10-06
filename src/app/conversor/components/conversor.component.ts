@@ -24,14 +24,18 @@ export class ConversorComponent implements OnInit {
 
   ngOnInit(): void {
     this.unidades = this.unidadeService.listarUnidade();
-    this.conversao = new Conversao('area', 'm2', 'km2', null)
+    this.init()
+  }
+  init():void{
+    this.conversao = new Conversao('area', 'm2', 'km2', null);
+    this.possuiErro = false;
   }
 
   converter():void{
     this.conversaoService.converter(this.conversao).subscribe(
       response => {
         this.conversaoResponse = response;
-        console.log(response)
+        console.log(this.conversaoResponse.convertedValue)
       },
       error => this.possuiErro = true
     )

@@ -4,12 +4,14 @@ import { ConversaoService, UnidadeService } from './services';
 import { ConversorComponent } from './components';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ModalResultComponent } from './utils';
 
 
 
 @NgModule({
   declarations: [
-    ConversorComponent
+    ConversorComponent,
+    ModalResultComponent
   ],
   imports: [
     CommonModule,
