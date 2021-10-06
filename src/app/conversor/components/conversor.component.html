@@ -1,0 +1,35 @@
+<div>
+    <form #conversorForm="ngForm">
+        
+        <label for="unidade">Unidade</label>
+        <select name="unidade" id="unidade" [(ngModel)]="conversao.unidade">
+            <option *ngFor="let unidade of unidades" [value]="unidade.unidade" >
+                {{unidade.unidade}}
+            </option>
+        </select>
+
+        <label for="from">De: </label>
+        <select name="from" id="from" [(ngModel)]="conversao.from">
+            <option *ngFor="let unidade of unidades" [value]="unidade.sigla" >
+                {{unidade.sigla}} - {{unidade.descricao}}
+            </option>
+        </select>
+
+        <label for="to">Para: </label>
+        <select name="to" id="to" [(ngModel)]="conversao.to">
+            <option *ngFor="let unidade of unidades" [value]="unidade.sigla" >
+                {{unidade.sigla}} - {{unidade.descricao}}
+            </option>
+        </select>
+
+        <label for="valor">Valor: </label>
+        <input type="text" name="valor" [(ngModel)]="conversao.valor">
+
+        <input type="submit" (click)="converter()">
+
+    </form>
+
+
+
+</div>
+
