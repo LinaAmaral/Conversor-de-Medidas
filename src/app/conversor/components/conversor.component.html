@@ -11,7 +11,7 @@
         <br>
 
         <label for="from">De: </label>
-        <select name="from" id="from" [(ngModel)]="conversao.from">
+        <select name="from" id="from" [(ngModel)]="conversao.from" required>
             <option *ngFor="let unidade of unidades" [value]="unidade.sigla" >
                 {{unidade.sigla}} - {{unidade.descricao}}
             </option>
@@ -20,7 +20,7 @@
         <br>
 
         <label for="to">Para: </label>
-        <select name="to" id="to" [(ngModel)]="conversao.to">
+        <select name="to" id="to" [(ngModel)]="conversao.to" required>
             <option *ngFor="let unidade of unidades" [value]="unidade.sigla" >
                 {{unidade.sigla}} - {{unidade.descricao}}
             </option>
@@ -29,11 +29,12 @@
         <br>
 
         <label for="valor">Valor: </label>
-        <input type="text" name="valor" [(ngModel)]="conversao.valor">
+        <input type="text" name="valor" [(ngModel)]="conversao.valor" required>
 
         <br>
 
-        <input type="submit" (click)="converter()" data-target="#modalResult" data-toggle="modal">
+        <input type="submit"  class="btn btn-primary my-4" (click)="converter()" data-target="#modalResult" data-toggle="modal"
+        [disabled]="!conversorForm.form.valid">
 
     </form>
    <app-modal-result
