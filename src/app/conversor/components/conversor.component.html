@@ -2,7 +2,7 @@
     <form #conversorForm="ngForm">
         
         <label for="unidade">Selecione a medida: </label>
-        <select name="unidade" id="unidade" [(ngModel)]="conversao.unidade" (change)="onSelect('temperature')">
+        <select #medida name="unidade" id="unidade" [(ngModel)]="conversao.unidade" (change)="onSelect(medida.value)">
             <option *ngFor="let medida of medidas" [value]="medida" >
                 {{medida}}
             </option>

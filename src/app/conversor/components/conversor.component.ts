@@ -25,11 +25,10 @@ export class ConversorComponent implements OnInit {
 
   ngOnInit(): void {
     this.medidas = this.unidadeService.getMedidas();
-    // this.unidades = this.unidadeService.listarUnidade();
     this.init()
   }
   init():void{
-    this.conversao = new Conversao('area', 'm2', 'km2', null);
+    this.conversao = new Conversao(null, null, null, null);
     this.possuiErro = false;
   }
 
