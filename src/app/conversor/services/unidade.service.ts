@@ -17,8 +17,20 @@ export class UnidadeService {
     { "unidade": "area", "sigla": "mi2", "descricao": "milhas quadradas" },
     { "unidade": "area", "sigla": "yd2", "descricao": "jardas quadradas" },
     { "unidade": "area", "sigla": "in2", "descricao": "polegadas quadradas" },
-    { "unidade": "area", "sigla": "ha", "descricao": "hectares" }
+    { "unidade": "area", "sigla": "ha", "descricao": "hectares" },
+    { "unidade": "temperature", "sigla": "k", "descricao": "Kelvin" },
+    { "unidade": "temperature", "sigla": "c", "descricao": "Graus Celcius" },
+    { "unidade": "temperature", "sigla": "f", "descricao": "Graus Fahrenheit" }
   ];
+
+  public unidadeOnly =[
+    {"unidade":"area"},
+    {"unidade":"lenght"},
+    {"unidade":"speed"},
+    {"unidade":"temperature"},
+    {"unidade":"volume"},
+    {"unidade":"weight"},
+  ]
 
   listarUnidade(): Unidade[]{
     if(this.unidades){
@@ -33,4 +45,6 @@ export class UnidadeService {
     }
     return this.unidades;
   }
+  
+
 }
