@@ -15,6 +15,7 @@ export class ConversorComponent implements OnInit {
   public conversao: Conversao;
   public conversaoResponse: ConversaoResponse;
   public possuiErro: boolean
+  public medidas: string[];
 
   @ViewChild('conversorForm', {static:true}) 
   conversorForm: NgForm
@@ -23,13 +24,21 @@ export class ConversorComponent implements OnInit {
     private conversaoService: ConversaoService) { }
 
   ngOnInit(): void {
-    this.unidades = this.unidadeService.listarUnidade();
+    this.medidas = this.unidadeService.getMedidas();
+    // this.unidades = this.unidadeService.listarUnidade();
     this.init()
   }
   init():void{
     this.conversao = new Conversao('area', 'm2', 'km2', null);
     this.possuiErro = false;
   }
+
+  onSelect(medida){
+    console.log(medida)
+    this.unidades = this.unidadeService.listarUnidade().filter((item)=>item.unidade == medida)
+  }
+
+
 
   converter():void{
     this.conversaoService.converter(this.conversao).subscribe(

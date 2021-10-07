@@ -23,14 +23,7 @@ export class UnidadeService {
     { "unidade": "temperature", "sigla": "f", "descricao": "Graus Fahrenheit" }
   ];
 
-  public unidadeOnly =[
-    {"unidade":"area"},
-    {"unidade":"lenght"},
-    {"unidade":"speed"},
-    {"unidade":"temperature"},
-    {"unidade":"volume"},
-    {"unidade":"weight"},
-  ]
+  public medidas =["area","lenght","speed","temperature","volume","weight"]
 
   listarUnidade(): Unidade[]{
     if(this.unidades){
@@ -44,6 +37,10 @@ export class UnidadeService {
       this.unidades.push(unidade);
     }
     return this.unidades;
+  }
+
+  getMedidas(){
+    return this.medidas
   }
   
 
