@@ -18,25 +18,29 @@ export class UnidadeService {
     { "unidade": "area", "sigla": "yd2", "descricao": "jardas quadradas" },
     { "unidade": "area", "sigla": "in2", "descricao": "polegadas quadradas" },
     { "unidade": "area", "sigla": "ha", "descricao": "hectares" },
+
     { "unidade": "temperature", "sigla": "k", "descricao": "Kelvin" },
     { "unidade": "temperature", "sigla": "c", "descricao": "Graus Celcius" },
     { "unidade": "temperature", "sigla": "f", "descricao": "Graus Fahrenheit" },
+    
     { "unidade": "speed", "sigla": "mph", "descricao": "Milhas por hora" },
-    { "unidade": "speed", "sigla": " fps", "descricao": "Pés por segundo" },
+    { "unidade": "speed", "sigla": "fps", "descricao": "Pés por segundo" },
     { "unidade": "speed", "sigla": "mps", "descricao": "Metros por segundo" },
     { "unidade": "speed", "sigla": "kmh", "descricao": "Quilômetros por hora" },
     { "unidade": "speed", "sigla": "kt", "descricao": "Nós (Knots)" },
+
     { "unidade": "volume", "sigla": "floz", "descricao": "Onças fluídas" },
-    { "unidade": "volume", "sigla": "gal", "descricao": "Galões americanos" },
     { "unidade": "volume", "sigla": "gal", "descricao": "Galões americanos" },
     { "unidade": "volume", "sigla": "ml", "descricao": "Mililitros" },
     { "unidade": "volume", "sigla": "l", "descricao": "Litros" },
+
     { "unidade": "weight", "sigla": "mg", "descricao": "Miligramas" },
     { "unidade": "weight", "sigla": "g", "descricao": "Gramas" },
     { "unidade": "weight", "sigla": "kg", "descricao": "Quilogramas" },
     { "unidade": "weight", "sigla": "ton", "descricao": "Toneladas" },
     { "unidade": "weight", "sigla": "lb", "descricao": "Libras" },
     { "unidade": "weight", "sigla": "oz", "descricao": "Onças" },
+
     { "unidade": "lenght", "sigla": "mm", "descricao": "Milímetros" },
     { "unidade": "lenght", "sigla": "cm", "descricao": "Centímetros" },
     { "unidade": "lenght", "sigla": "m", "descricao": "Metros" },
